@@ -8,11 +8,23 @@ class People:
     def get_firstname(self):
         return self.firstname
 
+    def set_firstname(self, new_firstname):
+        return self.firstname
+
     def get_lastname(self):
-        return self.lastname.upper
+        return self.lastname.upper()    #Read lastname in uppercase
 
     def get_gender(self):
         return self.__gender  #HOW DO YOU MAKE IT "PRIVATE USING DUNDERS?"
+
+    def set_firstname(self, new_firstname):
+        self.new_firstname = new_firstname
+        return self.firstname
+
+
+    def get_status(self):
+        return self.status
+
 
     def check_status(self, status):
         if self.status == "Employee":
