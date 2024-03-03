@@ -12,7 +12,7 @@ person2 = People("Monica","Geller", "Female", "Customer")
 person3 = People("Rachel","Green", "Female", "Employee"),
 
 
-#APP
+#APP - getters and setter used
 firstname = person1.get_firstname()
 print(f"First Name = {firstname}")
 
@@ -22,10 +22,10 @@ print(f"Last Name = {lastname}")
 gender = person1.get_gender()
 print(f"Gender = {gender}")
 
-print(50 * "#")
+print("\n", 50 * "#", "\n")
 
-new_firstname = person1.set_firstname("Chandler Muriel")
-print(f"Chandler's old firstname is {firstname} and his new first name is {new_firstname}")   #HOW TO CALL NEW FIRST NAME?
+person1.set_firstname("Chandler Muriel")    #setter used
+print(f"Chandler's old firstname is {firstname} and his new first name is {person1.get_firstname()}")
 
 status = person1.get_status()
 print(f"Status = {status}")

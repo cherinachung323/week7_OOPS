@@ -1,15 +1,15 @@
 class People:
-    def __init__(self, firstname, lastname, gender, status):
-        self.firstname = firstname
+    def __init__(self, firstname, lastname, gender, status):    #initiating attributes to be used in the programme
+        self.first_name = firstname
         self.lastname = lastname
         self.__gender = gender
         self.status = status
 
     def get_firstname(self):
-        return self.firstname
+        return self.first_name
 
-    def set_firstname(self, new_firstname):
-        return self.firstname
+    def set_firstname(self, new_lastname):
+        self.first_name = new_lastname
 
     def get_lastname(self):
         return self.lastname.upper()    #Read lastname in uppercase
@@ -17,9 +17,7 @@ class People:
     def get_gender(self):
         return self.__gender  #HOW DO YOU MAKE IT "PRIVATE USING DUNDERS?"
 
-    def set_firstname(self, new_firstname):
-        self.new_firstname = new_firstname
-        return self.firstname
+
 
 
     def get_status(self):
