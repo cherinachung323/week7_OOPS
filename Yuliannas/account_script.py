@@ -1,7 +1,7 @@
 from week7_OOPS.Yuliannas.accountPackage.account import Account
-from week7_OOPS.Yuliannas.accountPackage import SavingsAccount
-from week7_OOPS.Yuliannas.accountPackage import CheckingAccount
-from week7_OOPS.Yuliannas.accountPackage import InsufficientFundsException
+from week7_OOPS.Yuliannas.accountPackage.savings_account import SavingsAccount
+from week7_OOPS.Yuliannas.accountPackage.checking_account import CheckingAccount
+from week7_OOPS.Yuliannas.accountPackage.insufficient_funds_exception import InsufficientFundsException
 
 
 def get_account_number(account):
@@ -23,7 +23,6 @@ def get_overdraft_limit(account):
 # function takes an account object as input and prints its account number and balance. If the account object is an
 # instance of Account, it also prints the first and last name associated with the account
 def display_account_info(account):
-    print("\n********************\n")
     print(f"Account Information:")
     print(f"Account Number: {get_account_number(account)}")
     print(f"Balance: £{account1.balance}")
@@ -48,7 +47,6 @@ def display_account_info(account):
     if isinstance(account, CheckingAccount):
         print(f"Overdraft Limit: £{get_overdraft_limit(account)}")
 
-    print("\n********************\n")
 
 
 # Creating instances of Account, SavingsAccount, and CheckingAccount
@@ -65,23 +63,18 @@ savings_account3 = SavingsAccount("685865", 700, 1.5)
 checking_account3 = CheckingAccount("764344", 260, 1000)
 
 # Display account information
-display_account_info(account1)
-print()
-display_account_info(savings_account1)
-print()
-display_account_info(checking_account1)
+print(f"{account1}")
+print(f"{savings_account1}")
+print(f"{checking_account1}")
 
-display_account_info(account2)
-print()
-display_account_info(savings_account2)
-print()
-display_account_info(checking_account2)
+print(f"{account2}")
+print(f"{savings_account2}")
+print(f"{checking_account2}")
 
-display_account_info(account3)
-print()
-display_account_info(savings_account3)
-print()
-display_account_info(checking_account3)
+
+print(f"{account3}")
+print(f"{savings_account3}")
+print(f"{checking_account3}")
 
 
 # Attempting to withdraw an amount from the checking account. If the withdrawal exceeds the balance but does not
@@ -93,7 +86,7 @@ except InsufficientFundsException as e:
 
 # using the code from the lesson with account 1 info
 
-print(f"Account Info:\n{account1}\n")
+print(f"\nAccount Info:\n{account1}\n")
 
 # Trying to withdraw an amount that exceeds the balance
 try:

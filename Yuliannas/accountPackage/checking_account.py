@@ -34,4 +34,10 @@ class CheckingAccount(Account):
     #  with the message "Exceeds overdraft limit".
 
     def __str__(self):
-        return f"\nBalance: £{self.balance}\nAccount Number: {self._account_number}\nOverdraft Limit: £{self._overdraft_limit}\n********************\n"
+        info = f"\nBalance: £{self.balance}\nAccount Number: {self._account_number}\nOverdraft Limit: £{self._overdraft_limit}\n"
+        if self.first_name:
+            info += f"First Name: {self.first_name}\n"
+        if self.last_name:
+            info += f"Last Name: {self.last_name}\n"
+        info += "********************\n"
+        return info

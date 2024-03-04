@@ -29,8 +29,13 @@ class Account:
     # This is the __str__() method, which is called when the object needs to be converted to a string. It returns a
     # formatted string containing information about the account.
     def __str__(self):
-        return f"Account\nFirstname: {self.first_name}\nLastname: {self.last_name}" \
-               f"\nBalance: £{self.balance}\nAccount Number: {self._account_number}\n********************\n"
+        info = f"Account Number: {self._account_number}\n"
+        info += f"Balance: £{self.balance}\n"
+        if self.first_name:
+            info += f"First Name: {self.first_name}\n"
+        if self.last_name:
+            info += f"Last Name: {self.last_name}\n"
+        return info
 
     # This method allows deposits to the account. It increases the balance by the specified amount.
     def deposit(self, amount):
