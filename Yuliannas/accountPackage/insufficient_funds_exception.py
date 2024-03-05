@@ -1,5 +1,5 @@
-# Defines the InsufficientFundsException class, which inherits from the Exception class. By inheriting from Exception,
-# InsufficientFundsException becomes a type of exception that can be raised in Python programs.
+# Defines the InsufficientFundsException class, which inherits from the Exception class.
+# By inheriting from Exception,InsufficientFundsException becomes a type of exception that can be raised in programs.
 class InsufficientFundsException(Exception):
     # defines the constructor method for the InsufficientFundsException class. The constructor takes an optional message
     # parameter, which defaults to "Insufficient funds". This message will be used to provide additional information
