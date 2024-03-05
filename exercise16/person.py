@@ -1,51 +1,36 @@
 class Person:
     def __init__(self, name, age):
-        self._name = name
-        self._age = age
+        self.name = name
+        self.age = age
 
-    def get_name(self):
-        return self._name
-
-    def set_name(self, name):
-        self._name = name
-
-    def get_age(self):
-        return self._age
-
-    def set_age(self, age):
-        self._age = age
-
+# This class represents a generic person with attributes name and age.
+# The __init__ method serves as the constructor. It initializes the name and age attributes
+# when a new object of the class is created.
     def display_info(self):
-        print(f"Name: {self._name}, Age: {self._age}")
-
+        print(f"Name: {self.name}, Age: {self.age}")
+# The display_info method prints out the name and age of the person.
 
 class Employee(Person):
-    def __init__(self, name, age, employee_id):
+    def __init__(self, name, age, emp_id):
         super().__init__(name, age)
-        self._employee_id = employee_id
-
-    def get_employee_id(self):
-        return self._employee_id
-
-    def set_employee_id(self, employee_id):
-        self._employee_id = employee_id
+        self.emp_id = emp_id
 
     def display_info(self):
         super().display_info()
-        print(f"Employee ID: {self._employee_id}")
-
+        print(f"Employee ID: {self.emp_id}")
+# Inherits from the Person class, implying that it shares common attributes and behaviors with a Person.
+# Additional attribute emp_id is added to represent the employee ID.
+# The __init__ method initializes both the attributes inherited from Person and the emp_id.
+# The display_info method overrides the method of the same name in the Person class.
+# It first calls the display_info method of the parent class using super().display_info(),
+# then prints out the employee ID.
 
 class Customer(Person):
     def __init__(self, name, age, customer_id):
         super().__init__(name, age)
-        self._customer_id = customer_id
-
-    def get_customer_id(self):
-        return self._customer_id
-
-    def set_customer_id(self, customer_id):
-        self._customer_id = customer_id
+        self.customer_id = customer_id
 
     def display_info(self):
         super().display_info()
-        print(f"Customer ID: {self._customer_id}")
+        print(f"Customer ID: {self.customer_id}")
+# Also inherits from the Person class.

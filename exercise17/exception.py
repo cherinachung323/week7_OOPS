@@ -1,5 +1,5 @@
 from insufficient_fund import InsufficientFundsException, Account, SavingsAccount, CheckingAccount
-
+# Imports the custom exception and classes defined in insufficient_fund.py.
 # Create Account objects
 account1 = Account("ACC001", 5000)
 account1.display_info()
@@ -16,16 +16,16 @@ checking_account1.display_info()
 try:
     account1.withdraw(6000)  # Trying to withdraw more than the balance
 except InsufficientFundsException as e:
-    print(f"Error: {e}")
+    print(f"Account Error: {e}")
 
 try:
     checking_account1.withdraw(3000)  # Trying to withdraw more than the balance
 except InsufficientFundsException as e:
-    print(f"Error: {e}")
+    print(f"Checking Account Error: {e}")
 
 # Successful withdrawal
 try:
     savings_account1.withdraw(500)
     savings_account1.display_info()
 except InsufficientFundsException as e:
-    print(f"Error: {e}")
+    print(f"Savings account Error: {e}")
