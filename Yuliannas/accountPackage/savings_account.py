@@ -48,5 +48,7 @@ class SavingsAccount(Account):
             info += f"First Name: {self.first_name}\n"
         if self.last_name:
             info += f"Last Name: {self.last_name}\n"
-        info += f"Interest Rate: {self._interest_rate}%"
+        info += f"Interest Rate: {self._interest_rate}%\n"
+        info += f"Calculated Interest: £{self.calculate_interest()}\n"
         return info
+

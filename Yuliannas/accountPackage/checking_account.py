@@ -17,9 +17,16 @@ class CheckingAccount(Account):
         self._overdraft_limit = overdraft_limit
         # initialises the overdraft_limit attribute of the CheckingAccount object with the provided overdraft limit.
 
+    # Retrieving the value of the _overdraft_limit attribute. Not taking any arguments besides self, which is a reference
+    # to the instance of the class itself. self._overdraft_limit is returned it provides the current value of the
+    # overdraft limit attribute.
     def get_overdraft_limit(self):
         return self._overdraft_limit
 
+    # setter method, responsible for setting/updating the value of the _overdraft_limit attribute.
+    # It takes an additional argument value, which represents the new value to assign to the overdraft limit.
+    # Inside the method, self._overdraft_limit = value assigns the provided value to the _overdraft_limit attribute
+    # of the instance.
     def set_overdraft_limit(self, value):
         self._overdraft_limit = value
 
@@ -41,3 +48,8 @@ class CheckingAccount(Account):
             info += f"Last Name: {self.last_name}\n"
         info += "********************\n"
         return info
+    # special method in Python classes, it defines how instances of the class should be represented as strings
+    # info is initialised as an empty string.This string will accumulate information about the object to be returned
+    # as the final string representation.
+    # The method checks if the object has a first_name and last_name attribute. If it does, it appends the first name
+    # to info.  "********************\n" is added to info to serve as a separator.
